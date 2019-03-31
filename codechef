@@ -1,1 +1,26 @@
-# fun-
+problem 1.march lunch time 2019
+import operator
+
+
+T=int(input())
+for i in range(T):
+    NK=input().split()
+    N=int(NK[0])
+    k=int(NK[1])
+  
+    A = list(input())
+    
+    loc=[]
+    loc.append(k)
+    for i in A:
+        if i=='R':
+            k+=1 
+            if loc.count(k)==0:
+                loc.append(k)
+        else:
+            k-=1 
+            if loc.count(k)==0:
+                loc.append(k)
+            
+    
+    print(len(loc))
